@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    /* Layout Container */
+    .layout {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      flex: 1 1 200px;
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #27ae60;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 3 1 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* Product Card */
+    .product-card {
+      max-width: 100%;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .product-card p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .product-card button {
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .product-card button:hover {
+      background-color: #219150;
+    }
+
+    /* Blog Layout */
+    .blog-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .blog-post {
+      flex: 1 1 calc(33.333% - 20px);
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .blog-post h2 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .blog-post p {
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .blog-post {
+        flex: 1 1 100%;
+      }
+
+      .sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">tshirts</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Product Card -->
+      <div class="product-card">
+        <img src="https://plus.unsplash.com/premium_photo-1673356302169-574db56b52cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image" />
+        <h3>Oversize Hoodies</h3>
+        <p>Comfortable and trendy hoodie perfect for everyday wear.</p>
+        <button>Buy Now</button>
+      </div>
+
+      <!-- Blog Layout -->
+      <div class="blog-container">
+        <div class="blog-post">
+          <h2
+          <p>Discover the latest trends in  design.</p>
+        </div>
+    </div>
+  
+
+</body>
+</html>
