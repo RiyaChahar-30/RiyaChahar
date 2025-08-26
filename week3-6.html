@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Sidebar Layout</title>
+  <style>
+    /* Box Model Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .layout {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      flex: 1 1 250px;
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content {
+      flex: 3 1 600px;
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        order: 1;
+      }
+
+      .content {
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>Welcome to Our Site</h1>
+      <p>This is the main content area. Resize the browser to see the responsive sidebar in action.</p>
+    </div>
+  </div>
+</body>
+</html>
