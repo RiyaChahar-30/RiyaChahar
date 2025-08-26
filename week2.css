@@ -1,0 +1,60 @@
+/* Element selector */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* HEX */
+  color: rgb(33, 33, 33);     /* RGB */
+}
+
+/* ID selector */
+#main-header {
+  background-color: hsl(210, 50%, 60%); /* HSL */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Class selector */
+.tagline {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6); /* RGBA */
+}
+
+/* Attribute selector */
+section[data-role="highlight"] {
+  border: 2px dashed #333;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Pseudo-class selector */
+ul li:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Pseudo-element selector */
+h1::after {
+  content: " 🚀";
+}
+
+/* Favorite movie styling */
+.favorite {
+  font-weight: bold;
+  color: hsl(300, 70%, 40%);
+  background-color: rgba(255, 215, 0, 0.3);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Ordered list with random styles */
+ol li:nth-child(1) {
+  color: #e63946;
+  font-size: 1.2em;
+}
+ol li:nth-child(2) {
+  color: rgb(34, 139, 34);
+  font-style: italic;
+}
+ol li:nth-child(3) {
+  color: hsl(45, 100%, 50%);
+  text-transform: uppercase;
+}
